@@ -10,7 +10,7 @@ import (
 )
 
 type Clientes struct {
-	Id       int       `json: "id"`
+	Id       string    `json: "id"`
 	Nome     string    `json: "nome"`
 	Endereco *Endereco `json: "endereco"`
 	Telefone string    `json: "telefone"`
@@ -42,8 +42,8 @@ func VerCliente(w http.ResponseWriter, r *http.Request) {
 func main() {
 	r := mux.NewRouter()
 
-	clientes = append(clientes, Clientes{Id: 1, Nome: "Brigitte", Endereco: &Endereco{Cep: "00000-100", Cidade: "Paris", Rua: "Rua da Torre Eiffel"}})
-	clientes = append(clientes, Clientes{Id: 2, Nome: "Chalotte", Endereco: &Endereco{Cep: "00000-010", Cidade: "Londres", Rua: "Rua do Big Ben"}})
+	clientes = append(clientes, Clientes{Id: "1", Nome: "Brigitte", Endereco: &Endereco{Cep: "00000-100", Cidade: "Paris", Rua: "Rua da Torre Eiffel"}, Telefone: "9090-9090"})
+	clientes = append(clientes, Clientes{Id: "2", Nome: "Chalotte", Endereco: &Endereco{Cep: "00000-010", Cidade: "Londres", Rua: "Rua do Big Ben"}, Telefone: "8080-8080"})
 
 	r.HandleFunc("/clientes", ListarClientes).Methods("GET")
 	r.HandleFunc("/clientes/{id}", VerCliente).Methods("GET")
