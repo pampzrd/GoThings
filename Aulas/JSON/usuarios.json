@@ -1,0 +1,22 @@
+{
+    "usuarios":[
+        {
+            "Nome":"Maria",
+            "Tipo":"Leitora",
+            "Idade":30,
+            "Social":{
+                "facebook":"http://facebook.com",
+                "twitter":"http://twitter.com"
+            }
+        },
+        {
+            "Nome":"Joana",
+            "Tipo":"Autora",
+            "Idade":22,
+            "Social":{
+                "facebook":"http://facebook.com",
+                "twitter":"http://twitter.com"
+            }
+        }
+    ]
+}
