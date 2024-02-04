@@ -50,7 +50,7 @@ func main() {
 	var responseObject Response //Vai trabalhar com o responseData
 
 	json.Unmarshal(responseData, &responseObject) //Vai jogar os dados obtidos de responseData dentro de responseObject
-	//Imprime ?????
+	
 	fmt.Println(responseObject.Nome)
 	fmt.Println(len(responseObject.Pokemons))
 
